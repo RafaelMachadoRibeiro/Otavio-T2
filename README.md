@@ -3,9 +3,6 @@
 Problema Original
 O código original gerava números aleatórios da seguinte forma:
 
-javascript
-Copiar
-
 function gerarAleatorios(){
     var vetor = []
     var geracoes = []
@@ -23,20 +20,21 @@ function gerarAleatorios(){
     console.log("Gerações:", geracoes)
     console.log("Finais:", vetor)
 }
+
 Problemas Identificados
 Geração excessiva de números aleatórios
 Verificação de duplicatas usando includes() (complexidade O(n))
 Desperdício de recursos computacionais
 No exemplo fornecido, para gerar 50 números únicos, foram necessárias 85 operações (35 repetições desnecessárias)
-Solução Otimizada
-javascript
-Copiar
+
+Solução Otimizada:
 
 function gerarNumeros(quantidade) {
     return Array.from({length: 60}, (_, i) => i + 1)
         .sort(() => Math.random() - 0.5)
         .slice(0, quantidade);
 }
+
 Vantagens da Nova Solução
 Código mais conciso: Redução de 20+ linhas para apenas 3 linhas
 Zero duplicatas: Não precisa verificar números repetidos
@@ -57,15 +55,14 @@ Melhoria de Performance
 Redução de operações: 41.18%
 Redução de memória: ~50%
 Tempo de execução: Aproximadamente 70% mais rápido
-Como Usar
-javascript
-Copiar
+Como Usar:
 
 // Para gerar 6 números (Mega-Sena)
 console.log(gerarNumeros(6));
 
 // Para gerar 50 números
 console.log(gerarNumeros(50));
+
 Conclusão
 O novo algoritmo não só é mais eficiente em termos de recursos computacionais, como também é mais simples de entender e manter. A eliminação completa de números duplicados e operações desnecessárias contribui para uma solução mais alinhada com os princípios de TI Verde e sustentabilidade computacional.
 
