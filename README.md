@@ -1,6 +1,6 @@
 # <p align="center">Otimização de Gerador de Números Aleatórios</p>
 
-##Problema Original
+## Problema Original
 O código original gerava números aleatórios da seguinte forma:
 
 ```
@@ -23,13 +23,13 @@ function gerarAleatorios(){
 }
 ```
 
-##Problemas Identificados
+## Problemas Identificados
 Geração excessiva de números aleatórios
 Verificação de duplicatas usando includes() (complexidade O(n))
 Desperdício de recursos computacionais
 No exemplo fornecido, para gerar 50 números únicos, foram necessárias 85 operações (35 repetições desnecessárias)
 
-##Solução Otimizada:
+## Solução Otimizada:
 
 ```
 function gerarNumeros(quantidade) {
@@ -39,7 +39,7 @@ function gerarNumeros(quantidade) {
 }
 ```
 
-##Vantagens da Nova Solução
+## Vantagens da Nova Solução
 Código mais conciso: Redução de 20+ linhas para apenas 3 linhas
 Zero duplicatas: Não precisa verificar números repetidos
 Operações previsíveis: Número fixo de operações independente da aleatoriedade
@@ -47,7 +47,7 @@ Eficiência de memória: Não armazena números descartados
 Análise de Performance
 Para comparar os dois algoritmos, foi realizado um teste gerando 50 números:
 
-##Algoritmo Original
+## Algoritmo Original
 Operações realizadas: 85
 Números desperdiçados: 35
 Taxa de desperdício: 41.18%
@@ -60,7 +60,7 @@ Redução de operações: 41.18%
 Redução de memória: ~50%
 Tempo de execução: Aproximadamente 70% mais rápido
 
-##Como Usar:
+## Como Usar:
 
 
 ```
@@ -72,10 +72,10 @@ console.log(gerarNumeros(50));
 
 ```
 
-##Conclusão
+## Conclusão
 O novo algoritmo não só é mais eficiente em termos de recursos computacionais, como também é mais simples de entender e manter. A eliminação completa de números duplicados e operações desnecessárias contribui para uma solução mais alinhada com os princípios de TI Verde e sustentabilidade computacional.
 
-##Contribuição para ODS (Objetivos de Desenvolvimento Sustentável)
+## Contribuição para ODS (Objetivos de Desenvolvimento Sustentável)
 Esta otimização se alinha com os seguintes objetivos da ONU:
 
 ODS 9: Indústria, Inovação e Infraestrutura
